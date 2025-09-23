@@ -12,8 +12,7 @@ use crate::ttrpc_dep::ttrpc_protocol::{
     attestation_agent::{
         ExtendRuntimeMeasurementRequest, ExtendRuntimeMeasurementResponse,
         GetAdditionalEvidenceRequest, GetDerivedKeyRequest, GetDerivedKeyResponse,
-        GetEvidenceRequest, GetEvidenceResponse, GetTeeTypeRequest, GetTeeTypeResponse,
-        GetTokenRequest, GetEvidenceRequest, GetEvidenceResponse, GetTeeTypeRequest,
+        GetEvidenceRequest, GetEvidenceResponse, GetTeeTypeRequest,
         GetTeeTypeResponse, GetTokenRequest, GetTokenResponse,
     },
     attestation_agent_ttrpc::AttestationAgentService,
