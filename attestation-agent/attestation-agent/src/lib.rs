@@ -203,9 +203,9 @@ impl AttestationAPIs for AttestationAgent {
     }
 
     async fn get_derived_key(&self, context: Vec<u8>) -> Result<Vec<u8>> {
-        self.attester.get_derived_key(context).await
+        self.primary_attester.get_derived_key(context).await
     }
-    
+
     /// Get TEE hardware evidence from all additional attesters with runtime data
     /// included.
     async fn get_additional_evidence(&self, runtime_data: &[u8]) -> Result<Vec<u8>> {
