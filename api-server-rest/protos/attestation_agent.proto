@@ -18,6 +18,14 @@ message GetTokenResponse {
     bytes Token = 1;
 }
 
+message GetDerivedKeyRequest {
+    bytes KeyId = 1;
+}
+
+message GetDerivedKeyResponse {
+    bytes DerivedKey = 1;
+}
+
 service AttestationAgentService {
     rpc GetEvidence(GetEvidenceRequest) returns (GetEvidenceResponse) {};
     rpc GetToken(GetTokenRequest) returns (GetTokenResponse) {};

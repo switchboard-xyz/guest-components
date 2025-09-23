@@ -62,6 +62,9 @@ pub trait AttestationAPIs {
     /// data included.
     async fn get_evidence(&self, runtime_data: &[u8]) -> Result<Vec<u8>>;
 
+    /// Get a derived key
+    async fn get_derived_key(&self, context: Vec<u8>) -> Result<Vec<u8>>;
+
     /// Get TEE hardware evidence from all additional attesters with runtime data
     /// included. If no additional attester is configured, it will return an empty vector.
     async fn get_additional_evidence(&self, runtime_data: &[u8]) -> Result<Vec<u8>>;
@@ -199,6 +202,10 @@ impl AttestationAPIs for AttestationAgent {
         Ok(evidence.to_string().into_bytes())
     }
 
+    async fn get_derived_key(&self, context: Vec<u8>) -> Result<Vec<u8>> {
+        self.attester.get_derived_key(context).await
+    }
+    
     /// Get TEE hardware evidence from all additional attesters with runtime data
     /// included.
     async fn get_additional_evidence(&self, runtime_data: &[u8]) -> Result<Vec<u8>> {

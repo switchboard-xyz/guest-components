@@ -20,6 +20,10 @@ impl EvidenceProvider for MockedEvidenceProvider {
         Ok("test evidence".into())
     }
 
+    async fn get_derived_key(&self, _context: Vec<u8>) -> Result<Vec<u8>> {
+        Ok(vec![0u8; 32]) // Return a mock 32-byte key filled with zeros
+    }
+
     async fn get_additional_evidence(&self, _runtime_data: Vec<u8>) -> Result<String> {
         Ok("".into())
     }

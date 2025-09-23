@@ -25,6 +25,10 @@ pub trait EvidenceProvider: Send + Sync {
     /// Get evidence with as runtime data
     async fn primary_evidence(&self, runtime_data: Vec<u8>) -> Result<TeeEvidence>;
 
+    /// Get a derived key using the hardware-specific key derivation function.
+    /// The parameter `context` is data potentially used in the derivation process.
+    async fn get_derived_key(&self, context: Vec<u8>) -> Result<Vec<u8>>;
+    
     /// Get evidences of devices
     async fn get_additional_evidence(&self, runtime_data: Vec<u8>) -> Result<String>;
 

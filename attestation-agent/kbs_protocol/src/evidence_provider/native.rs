@@ -77,4 +77,11 @@ impl EvidenceProvider for NativeEvidenceProvider {
     async fn get_tee_type(&self) -> Result<Tee> {
         Ok(self.primary_tee)
     }
+
+    async fn get_derived_key(&self, context: Vec<u8>) -> Result<Vec<u8>> {
+        self.0
+            .get_derived_key(context)
+            .await
+            .map_err(|e| Error::GetDerivedKey(e.to_string()))
+    }
 }
