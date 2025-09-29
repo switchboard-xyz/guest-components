@@ -764,11 +764,12 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x01(\tR\tTokenType\"(\n\x10GetTokenResponse\x12\x14\n\x05Token\x18\x01\
     \x20\x01(\x0cR\x05Token\",\n\x14GetDerivedKeyRequest\x12\x14\n\x05KeyId\
     \x18\x01\x20\x01(\x0cR\x05KeyId\"7\n\x15GetDerivedKeyResponse\x12\x1e\n\
-    \nDerivedKey\x18\x01\x20\x01(\x0cR\nDerivedKey2\xcc\x01\n\x17Attestation\
+    \nDerivedKey\x18\x01\x20\x01(\x0cR\nDerivedKey2\xb0\x02\n\x17Attestation\
     AgentService\x12\\\n\x0bGetEvidence\x12%.attestation_agent.GetEvidenceRe\
     quest\x1a&.attestation_agent.GetEvidenceResponse\x12S\n\x08GetToken\x12\
     \".attestation_agent.GetTokenRequest\x1a#.attestation_agent.GetTokenResp\
-    onseb\x06proto3\
+    onse\x12b\n\rGetDerivedKey\x12'.attestation_agent.GetDerivedKeyRequest\
+    \x1a(.attestation_agent.GetDerivedKeyResponseb\x06proto3\
 ";
 
 /// `FileDescriptorProto` object which was a source for this generated file
