@@ -29,4 +29,5 @@ message GetDerivedKeyResponse {
 service AttestationAgentService {
     rpc GetEvidence(GetEvidenceRequest) returns (GetEvidenceResponse) {};
     rpc GetToken(GetTokenRequest) returns (GetTokenResponse) {};
+    rpc GetDerivedKey(GetDerivedKeyRequest) returns (GetDerivedKeyResponse) {};
 }
